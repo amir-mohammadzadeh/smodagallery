@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/Bootstrap/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="css/indexCss.css">
+    <link rel="stylesheet" type="text/css" href="css/productCard.css">
+    <link rel="stylesheet" type="text/css" href="css/products-filter.css">
+    <link rel="stylesheet" type="text/css" href="css/profileCard.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <title>S Moda gallery</title>
+</head>
+
+<body>
+
+    <!--  &#10006;  -->
+
+    <nav class="md-navbar d-md-none">
+        <div class="nav-container">
+
+            <div class="nav-icon insta-pos">
+                <a href="http://instagram.com/SMODAGALLERY">
+                    <img src="static/icons/instagram.svg" alt="Instagram" width="40">
+                </a>
+            </div>
+            <div class="nav-loc" label="mobile-footer" onclick="navigationClick('mobile-footer')">
+                <img src="static/icons/location.png" alt="" width="50">
+
+            </div>
+            <div class="nav-icon tel-pos">
+                <a href="http://t.me/SMODAGALLERY">
+                    <img src="static/icons/telegram.svg" alt="Telegram" width="45">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="lg-navbar d-md-block ">
+        <div class="lgNav-container">
+            <ul>
+                <li class="lgNav-items" label="products" onclick="navigationClick('products')">
+                    محصولات
+                </li>
+                <li class="lgNav-items" label="telegram" onclick="navigationClick('telegram')">
+                    <a>
+                        کانال تلگرامی
+                    </a>
+                </li>
+                <li class="lgNav-items" label="instagram" onclick="navigationClick('instagram')">
+                    <a>
+                        اینستگرام
+                    </a>
+                </li>
+                <li class="lgNav-items" label="aboutus" onclick="navigationClick('aboutus')">
+                    درباره ما
+                </li>
+
+            </ul>
+            <div class="lgNav-logo">
+                <img src="static/images/logo.png" alt="logo" height="50">
+            </div>
+        </div>
+    </nav>
+
+    <section class="baner-container">
+        <picture>
+            <source media="(min-width: 767px)" srcset="static/images/bnner-lg.png" alt="Desktop-Banner">
+            <img src="static/images/bnner.png" alt="banner" width="100%">
+        </picture>
+    </section>
+
+    <section id="filterNavbar" class="filter-navbar">
+
+        <div class="filter-container">
+
+            <div class="filter-item" value="شلوار" onclick="setFilter(this)">
+                شلوار
+                <span> &#10008;</span>
+            </div>
+            <div class="filter-item" value="مانتو" onclick="setFilter(this)">
+                مانتو
+                <span> &#10008;</span>
+            </div>
+            <div class="filter-item" value="rebate" onclick="setFilter(this)">
+                فروش ویژه
+                <span> &#10008;</span>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="md-card-preview" class="md-card-preview" onclick="close_MobileProductCard(this)">
+    </section>
+
+    <section id="mdProductsCard" class="md-products-card d-sm-none ">
+        <div class="md-container">
+            <!--
+            <div class="md-card" onclick="test(event ,this)">
+                <div class="card-container">
+                    <div class="md-card-img">
+                        <img src="static/products-image/IMG_20230911_205305_474.jpg" width="100%">
+
+                    </div>
+                    <div class="md-card-content">
+
+                        <div class="md-card-title">
+                            name of product
+                        </div>
+                        <div class="md-card-body">
+                            <div>
+                                free size
+                            </div>
+                            <div>
+                                color
+                            </div>
+                        </div>
+                        <div class="card-offer-value md-offer-pos">
+                            2,000,000
+                        </div>
+                        <div class="md-card-cost">
+                            <span>1,500,000</span>
+                            ریال
+                        </div>
+                    </div>
+                    <div class="md-card-offer">
+                        20 %
+                    </div>
+
+                </div>
+            </div>
+                  
+            <div class="md-card">
+                        <div class="card-container">
+                            <div class="md-card-img">
+            
+                            </div>
+                            <div class="md-card-content">
+            
+                                <div class="md-card-title">
+                                    name of product
+                                </div>
+                                <div class="md-card-body">
+                                    size or any thing
+                                </div>
+                                <div class="md-card-cost">
+                                    <span>1,500,000</span>
+                                    ریال                   
+                                </div>
+                                
+                            </div>
+                            <div class="md-card-offer">
+                                20 %
+                            </div>
+                            <div class="card-offer-value md-offer-pos">
+                                2,000,000
+                            </div>
+                        </div>
+            </div>
+            
+                -->
+        </div>
+
+        <!-- 
+        <div id="moreViewButton" class="md-product-button">
+            <button onclick="openProductView(this)">
+
+                See More
+
+            </button>
+        </div>
+        -->
+
+    </section>
+
+    <sectin id="lgProductCards" class="lg-products-card d-sm-block">
+        <div class="container-lg">
+            <div class="row row-cols-auto g-3 justify-content-center  ">
+
+                <!-- 
+                <div class="col">
+                    <div class="lg-card ">
+                        <div class="lg-container">
+                            <div class="lg-card-img">
+                                <img src="static/products-image/IMG_20230907_175442_529.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="lg-card-titler">
+                                name of product
+                            </div>
+                            <div class="lg-card-body">
+                                <div>
+                                    free size
+                                </div>
+                                <div>
+                                    color 
+                                </div>
+                            </div>
+                            <div class="lg-card-price">
+                                <span>1,500,000</span>
+                                ریال
+                            </div>
+
+                            <div id="offValue" class="lg-card-offer">
+                                20 %
+                            </div>
+                            <div id="offCost" class="card-offer-value lg-offer-pos">
+                                2,200,000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="lg-card ">
+                        <div class="lg-container">
+                            <div class="lg-card-img">
+
+                            </div>
+                            <div class="lg-card-titler">
+                                name of product
+                            </div>
+                            <div class="lg-card-body">
+                                size or any thing
+                            </div>
+                            <div class="lg-card-price">
+                                <span>1,500,000</span>
+                                ریال
+                            </div>
+
+                            <div id="offValue" class="lg-card-offer">
+                                20 %
+                            </div>
+                            <div id="offCost" class="card-offer-value lg-offer-pos">
+                                2,200,000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="lg-card ">
+                        <div class="lg-container flex-column">
+                            <div class="lg-card-img">
+
+                            </div>
+                            <div class="lg-card-titler">
+                                name of product
+                            </div>
+                            <div class="lg-card-body">
+                                size or any thing
+                            </div>
+                            <div class="lg-card-price">
+                                <span>1,500,000</span>
+                                ریال
+                            </div>
+
+                            <div id="offValue" class="lg-card-offer">
+                                20 %
+                            </div>
+                            <div id="offCost" class="card-offer-value lg-offer-pos">
+                                2,200,000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="lg-card ">
+                        <div class="lg-container flex-column">
+                            <div class="lg-card-img">
+
+                            </div>
+                            <div class="lg-card-titler">
+                                name of product
+                            </div>
+                            <div class="lg-card-body">
+                                size or any thing
+                            </div>
+                            <div class="lg-card-price">
+                                <span>1,500,000</span>
+                                ریال
+                            </div>
+
+                            <div id="offValue" class="lg-card-offer">
+                                20 %
+                            </div>
+                            <div id="offCost" class="card-offer-value lg-offer-pos">
+                                2,200,000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    -->
+
+
+            </div>
+        </div>
+    </sectin>
+
+    <footer class="footer pb-md-4" id="footer">
+
+        <div class="container-xs  mb-4">
+            <div class="row">
+                <div class="fo-name">
+                    S Moda gallery
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center ">
+
+                <div class="col-md">
+
+                    <div class="fo-aboutus foa-w-80">
+
+                        ما در گالری اس مدا همه روزه از ساعت ۹ونیم صبح تا ۱ ظهر و ۳ونیم عصر تا ۸ شب منتظر حضور گرمتان
+                        هستیم
+                        ، همچنین با دنبال کردن ما در شبکه های اجتماعی میتوانید از محصولات جدیدمان مطلع گردیده ویا به
+                        صورت آنلاین خرید نمایید.
+
+
+                    </div>
+
+                    <div class="fo-address">
+                        <img src="static/icons/location-2.png" alt="" width="20px">
+                        نقده - پاساژ فاطمی (سولدوز) - طبقه اول
+                    </div>
+
+                    <div class="fo-numbers container">
+                        <div class="row row-cols-auto ">
+                            <div class="col">
+                                <span>
+                                    <img src="static/icons/telephone-fill.svg" class="rotate">
+                                    09149718819
+                                </span>
+                                <span>
+                                    <img src="static/icons/telephone-fill.svg" class="rotate">
+                                    09225526896
+                                </span>
+                            </div>
+                            <div class="col hide d-md-inline " dir="auto">
+
+                                <span>
+                                    <a href="http://instagram.com/SMODAGALLERY">
+                                        @smodagallery
+                                    </a>
+                                    <img src="static/icons/instagram.png" width="22">
+
+                                </span>
+                                <span>
+
+                                    <a href="http://t.me/SMODAGALLERY">
+                                        @smodagallery
+                                    </a>
+                                    <img src="static/icons/telegram.png" width="25">
+
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-md  order-md-first">
+
+                    <div class="fo-map">
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d797.046552381687!2d45.385742369596876!3d36.95760936991358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4004f3f50b7a6505%3A0xb7e5bbd0dd16712c!2z2b7ZiNi02KfaqSDYstmG2KfZhtmHINin2LMg2YXYr9in!5e0!3m2!1sen!2s!4v1696794237552!5m2!1sen!2s"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="fo-designer pos-1" onclick="openProfileCard()">
+            Designer
+        </div>
+
+
+    </footer>
+
+    <section id="profile" class="profile" onclick="close_card(event , this)">
+
+        <div id="ProfileCard" class="profile-card showup">
+            <div class="pro-container">
+
+                <div class="profilr-image">
+                    <img src="static/images/Profile-Picture.png" alt="Profile Picture">
+
+                </div>
+                <div class="profile-name">
+                    امیر محمدزاده
+                </div>
+                <div class="profile-Number">
+
+                    09149718819
+                </div>
+                <div class="pro-acounts">
+
+                    <a href="https://instagram.com/amir.m_0204_">
+                        <img src="static/icons/instagram-p.svg" alt="" width="35px">
+                    </a>
+                    <a href="https://t.me/amir_7702">
+                        <img src="static/icons/telegram-p.svg" alt="" width="35px">
+                    </a>
+                    <a href="https://www.linkedin.com/in/amir-mohammadzadeh-23b864291">
+                        <img src="static/icons/linkedin-p.svg" alt="" width="30px">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="lg-QRcode-preview" class="lg-qrcode-preview" onclick="close_card(event , this)">
+
+        <div class="qr-card">
+            <div class="qr-container">
+                <div class="qr-code">
+                    <img alt="" width="100%" height="100%">
+                </div>
+                <div class="qr-id">
+                    <a href="http://">
+                        @SMODAGALLERY
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="JS/data.js"></script>
+    <script src="JS/indexJs.js"></script>
+    <script src="static/Bootstrap/bootstrap.js"></script>
+</body>
+
+</html>
+
+
+    

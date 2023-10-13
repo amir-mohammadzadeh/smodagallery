@@ -1,0 +1,93 @@
+
+
+.footer{
+    position: relative;
+    direction: rtl;
+    background-color: #3c4d5f;
+    width: calc(100% - 14%);
+    height: auto;
+    padding-inline: 7%;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 100px; /* must be changed */
+}
+.pb-6{   padding-bottom: 80px ;}
+
+.fo-name{
+    font-family: 'MyFont', sans-serif;
+    font-size: 1.5em;
+    color: #80f7b4;
+    margin-bottom: 20px;
+    text-align: center;
+}
+ 
+
+
+.fo-aboutus{
+    font: 1.3em 'BMitra';
+    color: #ccd8d7;
+    padding-bottom: 10px ;
+    
+}
+
+
+.fo-numbers span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+    color: rgb(213, 239, 241);
+    font-size: 1.0em;
+    transition: .3s;
+}
+.fo-numbers span:hover{
+    cursor: none;
+    transform: scale(1.2);
+}
+.fo-address{
+
+    position: relative;
+    font: 1.3em 'BMitra';
+    color: #ccd8d7;
+    margin: 20px 5%;
+    padding-inline: 25px 0;
+}
+
+.fo-address img{
+    position: absolute;
+    right: 0;
+    top: -8px;
+
+}
+.fo-map{
+    width: 90%;
+    height: 280px;
+    margin: auto;
+}
+
+
+.fo-designer {
+    color: rgb(183, 222, 188);
+    text-decoration: underline;
+    text-decoration-color: #e2ea076a;
+    text-underline-offset: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 9%;
+    padding-bottom: 20px;
+    
+}
+
+
+@media (max-width: 768px) {
+    
+    body{
+        font-size: 15px;
+    }
+    
+    .pos-1{
+        bottom: 60px;
+        left: 20%;
+    }
+}
