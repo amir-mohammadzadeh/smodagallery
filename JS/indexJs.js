@@ -185,7 +185,7 @@ function navigationClick(label){
 
         case 'telegram' :
             activeButton();
-            src = '../static/images/Tel-QRcode.png';
+            src = 'static/images/Tel-QRcode.png';
             id = '@SMODAGALLERY' ;
             linke = 'http://t.me/SMODAGALLERY' ;
             open_QRcod_card(1, src, id, linke);
@@ -194,7 +194,7 @@ function navigationClick(label){
             
         case 'instagram' :
             activeButton();
-            src = '../static/images/insta-QRcode.png';
+            src = 'static/images/insta-QRcode.png';
             id = '@SMODAGALLERY' ;
             linke = 'http://instagram.com/SMODAGALLERY' ;
             open_QRcod_card(2, src, id, linke);
